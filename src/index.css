@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-ivory: #F8F4EF;
+  --color-gold: #C5A572;
+  --color-gold-light: #DFCAAB;
+  --color-gold-dark: #9E7D48;
+  --color-beige: #E9DDD1;
+  --color-beige-light: #F4ECE4;
+  --color-espresso: #28201D;
+  --color-espresso-dark: #1A1412;
+  --color-espresso-light: #3E322D;
+  --color-rose: #C99A98;
+  --color-rose-light: #E4C8C6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #28201D;
+    background-color: #F8F4EF;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Luxury Details */
+::selection {
+  background-color: #C5A572;
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F4EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A572;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9E7D48;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
